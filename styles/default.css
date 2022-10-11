@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: nanum gothic;
+}
+
+
+
+
+
+/*모바일*/
+@media(max-width:400px){
+
+  .no_mobile {display:none;}
+  .num {word-break:keep-all !important;}
+  
+ body {
+  font-size:24px;
+}
+
+ /*헤더*/
+ .header #topwarp {position: relative;}

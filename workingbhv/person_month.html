@@ -1,0 +1,561 @@
+<!--Include Top---------------------------------------->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>근태관리-인원별 근태현황</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280, user-scalable=yes" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,600&amp;display=swap&amp;subset=korean"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f95992fb4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_top">
+            <div class="top_left">
+                <a href="#">KUMHO PETROCHEMICAL</a>
+            </div>
+            <div class="top_right">
+                <a href="#">로그아웃</a>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="logo">
+                <a href="#"><img src="../images/logo_w.png" /></a>
+            </div>
+            <div class="menu">
+                <a href="../bbs/visitor_list.html"><i class="fa-solid fa-door-open"></i>방문관리</a>
+                <a href="../workingbhv/user_working_list.html" class="on"><i class="fa-solid fa-user-clock"></i>근태관리</a>
+                <a href="#"><i class="fa-solid fa-users-viewfinder"></i>안전관리</a>
+                <a href="#"><i class="fa-solid fa-gear"></i>사용자관리</a>
+                <a href="#"><i class="fa-regular fa-rectangle-list"></i>출입내역</a>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="content">
+            <div class="left">
+                <div class="left_tit">
+                    <!--//Include Top---------------------------------------->
+                    <!--Include Left---------------------------------------->
+                    <i class="fa-solid fa-user-clock"></i>
+                    <span>근태관리</span>
+                </div>
+                <a href="user_working_list.html">일간근태현황</a>
+                <a href="user_working_month.html">월간근태현황</a>
+                <a href=" user_working_month_term.html">기간별근태현황</a>
+            </div>
+            <div class="right">
+                <!--//Include Left---------------------------------------->
+                <!--Content-->
+                <div class="title">인원별 월간 근태현황</div>
+                <div class="description"></div>
+                <!--검색Tool-->
+                <div class="contents">
+                    <div class="cal_top1">
+                        <div class="cal_left1">
+                            <span class="cal_print">월별 개인 근태보고서</span><br>
+                            <span id="ContentPlaceHolder1_currYearMonth">2022.10</span>
+                            <span id="ContentPlaceHolder1_lblTimeSum" class="font_black">(월누적 : 50시간 49분 / 출근일수 : 6
+                                일)</span>
+                        </div>
+                        <div class="cal_center1">
+                        </div>
+                        <div class="cal_right1">
+                            <div class="result_img">
+                                <div class="w_imgbox">
+                                    <img src="../images/access_sample1.jpg">
+                                </div>
+                            </div>
+                            <div class="result_txt">
+                                <b><span class="font_black">강지영</span></b><br>
+                                <span style="display:none"></span><br>
+                                연락처 : <span></span>
+                                <span style="display:none">yn954</span>
+                                <!--사번숨김181128--><br>
+                                소속 : <span id="ContentPlaceHolder1_lblUserPosition">경영지원부서</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cal_top">
+
+                        <div class="cal_left" style="border-collapse:collapse">
+                            <a href="#">◀◀</a>
+                            <a href="#">◀</a>
+                            <a href="#">▶</a>
+                            <a href="#">▶▶</a>
+                            <a href="#">인쇄</a>
+                        </div>
+                        <div class="cal_right">
+                            <input type="text" value="강지영" placeholder="이름" style="width:80px; height: 28px;">
+                            <input type="text" value="yn954" placeholder="사번" style="width:80px; height: 28px;">
+                            <a href="#">직원검색</a>
+                        </div>
+                    </div>
+                    <div>
+                        <!--검색전 or 결과없음 -->
+                        <table border="1" bordercolor="#aaa" frame="hsides" class="cal">
+                            <colgroup>
+                                <col width="14.2587%">
+                                <col width="14.2587%">
+                                <col width="14.2587%">
+                                <col width="14.2587%">
+                                <col width="14.2587%">
+                                <col width="14.2587%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="font_black">일</th>
+                                    <th class="font_black">월</th>
+                                    <th class="font_black">화</th>
+                                    <th class="font_black">수</th>
+                                    <th class="font_black">목</th>
+                                    <th class="font_black">금</th>
+                                    <th class="font_black">토</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay00" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay01" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay02" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay03" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay04" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay05" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay06" class="day">1</span>
+                                        <span id="ContentPlaceHolder1_lblTimeTiff_06"> - 10:26</span>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <span id="ContentPlaceHolder1_lblON_06">출근 : 05:58</span>
+                                        <span id="ContentPlaceHolder1_lblOFF_06">퇴근 : 16:24</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay07" class="day">2</span>
+                                        <span id="ContentPlaceHolder1_lblTimeTiff_07"> - 10:12</span>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <span id="ContentPlaceHolder1_lblON_07">출근 : 06:01</span>
+                                        <span id="ContentPlaceHolder1_lblOFF_07">퇴근 : 16:13</span>
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay08" class="day">3</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_08"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_08"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay09" class="day">4</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_09"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_09"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay10" class="day">5</span>
+                                        <span id="ContentPlaceHolder1_lblTimeTiff_10"> - 10:55</span>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <span id="ContentPlaceHolder1_lblON_10">출근 : 05:56</span>
+                                        <span id="ContentPlaceHolder1_lblOFF_10">퇴근 : 16:51</span>
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay11" class="day">6</span>
+                                        <span id="ContentPlaceHolder1_lblTimeTiff_11"> - 10:33</span>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <span id="ContentPlaceHolder1_lblON_11">출근 : 06:13</span>
+                                        <span id="ContentPlaceHolder1_lblOFF_11">퇴근 : 16:46</span>
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay12" class="day">7</span>
+                                        <span id="ContentPlaceHolder1_lblTimeTiff_12"> - 00:00</span>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <span id="ContentPlaceHolder1_lblON_12">출근 : 06:03</span>
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay13" class="day">8</span>
+                                        <span id="ContentPlaceHolder1_lblTimeTiff_13"> - 08:43</span>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <span id="ContentPlaceHolder1_lblON_13">출근 : 05:56</span>
+                                        <span id="ContentPlaceHolder1_lblOFF_13">퇴근 : 14:39</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay14" class="day">9</span>
+                                        <span id="ContentPlaceHolder1_lblTimeTiff_14"> - 00:00</span>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <div class="w_imgbox">
+                                            <img src="../images/access_sample.jpg">
+                                        </div>
+                                        <span id="ContentPlaceHolder1_lblON_14">출근 : 05:49</span>
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay15" class="day">10</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_15"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_15"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay16" class="day">11</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_16"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_16"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay17" class="day">12</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_17"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_17"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay18" class="day">13</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_18"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_18"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay19" class="day">14</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_19"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_19"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay20" class="day">15</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_20"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_20"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay21" class="day">16</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_21"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_21"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay22" class="day">17</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_22"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_22"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay23" class="day">18</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_23"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_23"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay24" class="day">19</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_24"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_24"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay25" class="day">20</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_25"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_25"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay26" class="day">21</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_26"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_26"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay27" class="day">22</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_27"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_27"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay28" class="day">23</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_28"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_28"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay29" class="day">24</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_29"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_29"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay30" class="day">25</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_30"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_30"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay31" class="day">26</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_31"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_31"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay32" class="day">27</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_32"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_32"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay33" class="day">28</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_33"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_33"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay34" class="day">29</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_34"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_34"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay35" class="day">30</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_35"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_35"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay36" class="day">31</span>
+
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgA_36"
+                                                src="../images/access_sample.jpg"></div>
+                                        <div class="w_imgbox"><img id="ContentPlaceHolder1_lblImgB_36"
+                                                src="../images/access_sample.jpg"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay37" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay38" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay39" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay40" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+
+
+                                    </td>
+                                    <td>
+                                        <span id="ContentPlaceHolder1_lblDay41" class="day"></span>
+
+                                        <div class="w_imgbox"></div>
+                                        <div class="w_imgbox"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--//Content-->
+            <!--Include bottom---------------------------------------->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="content">
+            Copyright ⓒ KUMHO PETROCHEMICAL.</a> All Rights Reserved.
+        </div>
+    </div>
+</body>
+
+</html>
+<!--//Include bottom---------------------------------------->

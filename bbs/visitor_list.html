@@ -1,0 +1,371 @@
+<!--Include Top---------------------------------------->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>방문관리-방문신청목록</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,600&amp;display=swap&amp;subset=korean"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f95992fb4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_top">
+            <div class="top_left">
+                <a href="#">KUMHO PETROCHEMICAL</a>
+            </div>
+            <div class="top_right">
+                <a href="#">로그아웃</a>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="logo">
+                <a href="#"><img src="../images/logo_w.png" /></a>
+            </div>
+            <div class="menu">
+                <a href="../bbs/visitor_list.html" class="on"><i class="fa-solid fa-door-open"></i>방문관리</a>
+                <a href="../workingbhv/user_working_list.html"><i class="fa-solid fa-user-clock"></i>근태관리</a>
+                <a href="#"><i class="fa-solid fa-users-viewfinder"></i>안전관리</a>
+                <a href="#"><i class="fa-solid fa-gear"></i>사용자관리</a>
+                <a href="#"><i class="fa-regular fa-rectangle-list"></i>출입내역</a>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="content">
+            <div class="left">
+                <div class="left_tit no_mobile">
+                    <!--//Include Top---------------------------------------->
+                    <!--Include Left---------------------------------------->
+                    <i class="fa-regular fa-rectangle-list"></i>
+                    <span>방문관리</span>
+                </div>
+                <a href="visitor_list.html" class="">방문신청목록</a>
+                <a href="#" class="inner on">전체 보기</a>
+                <a href="#" class="inner">업무방문자</a>
+                <a href="#" class="inner">일용직&공사업체</a>
+                <a href="visitor_add.html">관리자 대리신청</a>
+            </div>
+            <div class="right">
+                <!--//Include Left---------------------------------------->
+                <!--Content-->
+                <div class="title">방문신청목록</div>
+                <div class="description">모든 방문신청을 조회합니다.</div>
+                <!--검색Tool-->
+                <div class="tbl_search">
+                    <table>
+                        <colgroup>
+                            <col style="width: 15%" class="col_width" />
+                            <col />
+                        </colgroup>
+                        <tr>
+                            <th class="no_mobile">방문자유형별</th>
+                            <td class=" btn_input_a no_mobile">
+                                <div class="inner_td">
+                                    <a href="#" class="on">전체</a>
+                                    <a href="#">업무방문</a>
+                                    <a href="#">일용직&공사업체</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>승인상태별</th>
+                            <td class="btn_input_a">
+                                <div class="inner_td">
+                                    <a href="#" class="on">전체</a>
+                                    <a href="#">승인중</a>
+                                    <a href="#">승인</a>
+                                    <a href="#">만료</a>
+                                    <a href="#">승인취소</a>
+                                    <a href="#">반려</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기간별</th>
+                            <td class="btn_input_a">
+                                <div class="inner_td">
+                                    <input type="date" class="no_mobile">
+                                    <div class="no_mobile">~</div>
+                                    <input type="date" class="no_mobile">
+                                    <a href="#" class="a_ml">일주일</a>
+                                    <a href="#">1개월</a>
+                                    <a href="#">3개월</a>
+                                    <a href="#">6개월</a>
+                                    <a href="#">1년</a>
+                                    <a href="#" class="on">전체</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>키워드검색</th>
+                            <td class="btn_input_a">
+                                <div class="inner_td">
+                                    <select class="no_mobile">
+                                        <option>방문자명</option>
+                                        <option>휴대폰번호</option>
+                                        <option>회사명</option>
+                                        <option>차량번호</option>
+                                        <option>사업장</option>
+                                        <option>담당자</option>
+                                    </select>
+                                    <input placeholder="검색어를 입력해주세요" />
+                                    <a href="#">검색</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--//검색Tool-->
+                <div class="count_page no_mobile">
+                    <div class="count_num">
+                        <span>총</span>
+                        <span class="accent_color">29</span>
+                        <span>건</span>
+                        <select>
+                            <option>10</option>
+                            <option>30</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>
+                        <span>개씩</span>
+                    </div>
+                    <div class="btn_a">
+                        <a href="#">대리신청</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <!--목록-->
+                    <div class="tbl_list hover_cursor">
+                        <table>
+                            <colgroup>
+                                <col style="width: 13%" />
+                                <col style="width: 9%" />
+                                <col />
+                                <col style="width: 8%" />
+                                <col style="width: 10%" />
+                                <col style="width: 14%" />
+                                <col style="width: 8%" />
+                                <col style="width: 16%" />
+                                <col style="width: 10%" />
+                            </colgroup>
+                            <thead class="no_mobile">
+                                <tr>
+                                    <th>방문기간</th>
+                                    <th><a href="#">유형</a></th>
+                                    <th><a href="#">목적</a></th>
+                                    <th><a href="#">이름</a></th>
+                                    <th><a href="#">휴대폰</a></th>
+                                    <th><a href="#">회사명</a></th>
+                                    <th><a href="#">차랑번호</a></th>
+                                    <th><a href="#">사업장 및 담당자</a></th>
+                                    <th><a href="#">상태</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="num">
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div class="font_black">2022-09-15 13:00</div>
+                                                <div>2022-09-15 16:00</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="no_mobile">업무방문</td>
+                                    <td>프로젝트 개발협의</td>
+                                    <td class="visitor_name">
+                                        <div class="td_content">
+                                            <div class="inner_td center_td">
+                                                <div class="font_black">강민수</div>
+                                                <div>외 2명</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="num">010-1234-4567</td>
+                                    <td>주식회사 슈프리마</td>
+                                    <td class="no_mobile">123허1234</td>
+                                    <td class="no_mobile">
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div>전자소재 매각사업부문</div>
+                                                <div class="font_black">임경진대리</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="stat back_blue">승인중</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div class="font_black">2022-09-15 13:00</div>
+                                                <div>2022-09-15 16:00</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>일용직</td>
+                                    <td>창문보수공사</td>
+                                    <td class="tbl_title">
+                                        <div class="inner_td center_td">
+                                            <div class="font_black">홍길동</div>
+                                        </div>
+                                    </td>
+                                    <td class="num">010-1234-4567</td>
+                                    <td>-</td>
+                                    <td>123허1234</td>
+                                    <td>
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div>여수정밀화학공장</div>
+                                                <div class="font_black">임경진대리</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="stat back_green">승인</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div class="font_black">2022-09-15 13:00</div>
+                                                <div>2022-09-15 16:00</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>업무방문</td>
+                                    <td>출입통제시스템 설치 및 운영...</td>
+                                    <td>
+                                        <div class="inner_td center_td">
+                                            <div class="font_black">김경완</div>
+                                            <div>외 4명</div>
+                                        </div>
+                                    </td>
+                                    <td class="num">010-1234-4567</td>
+                                    <td>주식회사 슈프리마</td>
+                                    <td>123허1234</td>
+                                    <td>
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div>여수정밀화학공장</div>
+                                                <div class="font_black">임경진대리</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="stat back_grey">승인취소</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div class="font_black">2022-09-15 13:00</div>
+                                                <div>2022-09-15 16:00</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>공사업체</td>
+                                    <td>출입통제시스템 설치 및 운영...</td>
+                                    <td>
+                                        <div class="inner_td center_td">
+                                            <div class="font_black">박태진</div>
+                                            <div>외 1명</div>
+                                        </div>
+                                    </td>
+                                    <td class="num">010-1234-4567</td>
+                                    <td>주식회사 다움 디자인...</td>
+                                    <td>123허1234</td>
+                                    <td>
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div>여수정밀화학공장</div>
+                                                <div class="font_black">임경진대리</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="stat back_red">반려</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="num">
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div class="font_black">2022-09-15 13:00</div>
+                                                <div>2022-09-15 16:00</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>업무방문</td>
+                                    <td>출입통제시스템 설치 및 운영...</td>
+                                    <td>
+                                        <div class="inner_td center_td">
+                                            <div class="font_black">김영훈</div>
+                                            <div>외 2명</div>
+                                        </div>
+                                    </td>
+                                    <td class="num">010-1234-4567</td>
+                                    <td>주식회사 마이즈</td>
+                                    <td>123허1234</td>
+                                    <td>
+                                        <div class="td_content ">
+                                            <div class="inner_td center_td">
+                                                <div>여수정밀화학공장</div>
+                                                <div class="font_black">임경진대리</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="stat back_grey">만료</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--//목록-->
+                </div>
+                <div class="btn_a between">
+                    <div class="btn_column">
+                    </div>
+                    <div class="btn_column">
+                        <a href="#">대리신청</a>
+                    </div>
+                </div>
+                <!--Paging-->
+                <div class="page_num">
+                    <a><i class="fa-solid fa-angles-left"></i></a>
+                    <a class="paging_prev">이전</a>
+                    <a class="on">1</a>
+                    <a>2</a>
+                    <a>3</a>
+                    <a>4</a>
+                    <a>5</a>
+                    <a class="paging_next">다음</a>
+                    <a><i class="fa-solid fa-angles-right"></i></a>
+                </div>
+                <!--//Paging-->
+            </div>
+            <!--//Content-->
+            <!--Include bottom---------------------------------------->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="content">
+            Copyright ⓒ KUMHO PETROCHEMICAL.</a> All Rights Reserved.
+        </div>
+    </div>
+</body>
+
+</html>
+<!--//Include bottom---------------------------------------->
