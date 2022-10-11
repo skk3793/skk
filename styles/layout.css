@@ -1671,11 +1671,12 @@ a {
 }
 
 input {
-  height: 36px;
+  height: 30px;
+  border-radius: none;
 }
 body {
   width: 100%;
- font-size:15px;
+ font-size:14px;
 }
 
 .body .content {
@@ -1707,7 +1708,7 @@ body {
   background: rgba(0, 0, 0, 0.05)
 }
  
-}
+
 .body .right {
   width: 100%;
   padding: 16px;
